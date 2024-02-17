@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledCatalogList = styled.ul`
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   row-gap: 50px;

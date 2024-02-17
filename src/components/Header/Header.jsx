@@ -17,7 +17,7 @@ const Header = () => {
           </li>
           <li>
             <HeaderLink to="/favorites">
-              Favorite
+              Favorites
             </HeaderLink>
           </li>
         </HeaderList>

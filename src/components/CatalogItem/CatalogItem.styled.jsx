@@ -60,7 +60,7 @@ export const CarBtn = styled.button`
     border: none;
     background-color: #3470ff;
     box-shadow: 0px 4px 8px 0px rgba(64, 123, 255, 0.34);
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 250ms cubic-bezier(0., 0, 0.2, 1);
 
     &:hover {
       background-color: #0b44cd;
@@ -79,8 +79,28 @@ export const FavBtn = styled.button`
     border: none;
     background-color: transparent;
 
+    & svg {
+      path {
+        transition: all 250ms cubic-bezier(0.3, 0, 0.2, 1);
+        stroke: rgba(255, 255, 255, 0.8); // Normal color
+      }
+      width: 18px;
+      height: 18px;
+    }
 
-`
+    &.isFavorite {
+      & svg {
+        path {
+          stroke: #3470ff; // Color when the car is marked as favorite
+          fill: #3470ff; // Color when the car is marked as favorite
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }`
 
 // export const icon-heart-btn {
 //     position: absolute;
