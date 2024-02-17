@@ -1,10 +1,12 @@
 import Line from "../LineDecoration/LineDecoration"
+import {CarsItem, ContentWrapper, CarsImg, TitleWrapper, CarsTitle, CarPrice, Description, CarBtn, FavBtn} from "./CatalogItem.styled"
 import {
   splitAddressCity,
   splitAddressCountry,
   firstLetterUpCase,
   shortestSentence
 } from '../../helpers/helpers';
+import { ReactComponent as IconFavourite } from "../../assets/svg/heart.svg";
 
 const CatalogItem = ({id, year, make, model, type, img, description, fuelConsumption, engineSize, accessories, functionalities, rentalPrice, rentalCompany, address  }) => {
   
@@ -13,35 +15,34 @@ const CatalogItem = ({id, year, make, model, type, img, description, fuelConsump
   const carType = firstLetterUpCase(type);
   const functionality = shortestSentence(functionalities)
    return (
-    <li>
-     <div>
-        <img src={img} alt={description}/>
-        <button>follow</button>
-        <div>
-          <p>{`${make} ${model}, ${year}`}</p>
-          <p>{rentalPrice}</p>
-        <div/>
-         <div >
-          {city}
+    <CarsItem>
+     <ContentWrapper>
+        <CarsImg src={img} alt={model}/>
+        <TitleWrapper>
+          <CarsTitle>{`${make} ${model}, ${year}`}</CarsTitle>
+          <CarPrice>{rentalPrice}</CarPrice>
+        </TitleWrapper>
+         <Description >
+          {city} 
           <Line />
-          {country}
+          {country} 
           <Line />
-          {rentalCompany}
+          {rentalCompany} 
           <Line />
-          {carType}
+          {carType} 
           <Line />
-          {make}
+          {make} 
           <Line />
-          {id}
+          {id} 
           <Line />
           {functionality}
-        </div>
-     </div>
-     </div>
-     <button type="button">
+        </Description>
+        <FavBtn><IconFavourite/></FavBtn>
+     </ContentWrapper>
+     <CarBtn type="button">
         Learn more
-      </button>
-    </li>
+      </CarBtn>
+    </CarsItem>
    )
 }
 

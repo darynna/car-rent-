@@ -1,9 +1,10 @@
 import CatalogItem from "../CatalogItem/CatalogItem";
+import {StyledCatalogList} from "./CatalogList.styled"
 
 const CatalogList = ({carsArray}) => {
 
   return (
-    <ul>
+    <StyledCatalogList>
       {carsArray.length !== 0 &&
         carsArray.map(({id, year, make, model, type, img, description, fuelConsumption, engineSize, accessories,
 functionalities, rentalPrice, rentalCompany, address}) => {
@@ -25,7 +26,7 @@ functionalities, rentalPrice, rentalCompany, address}) => {
             />
           );
         })}
-    </ul>
+    </StyledCatalogList>
   );
 };
 
