@@ -172,4 +172,3 @@ const Modal = ({ car, closeModal }) => {
 
 export default Modal;
 
-// const {year, make, model, type, img, description, fuelConsumption, engineSize, accessories, functionalities, rentalPrice, rentalCompany, address, rentalConditions, mileage} = carDate;
