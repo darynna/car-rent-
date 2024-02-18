@@ -45,15 +45,31 @@ export const getMoreRentalCars = createAsyncThunk(
 const INITIAL_STATE = {
   carsArray: [],
   carsTotalAmount: null,
-  // selectedCar: null,
   isLoading: false,
   error: null,
+  brandFilter: "All Cars",
+  priceFilter: 'Any prices',
+  mileageFromFilter: null,
+  mileageToFilter: null
 };
 
 const carsSlice = createSlice({
   name: "cars",
   initialState: INITIAL_STATE,
-
+  reducers:{
+    setBrandFilter(state, action) {
+      state.brandFilter = action.payload
+    },
+    setPriceFilter(state, action) {
+      state.priceFilter = action.payload
+    },
+    setMileageFromFilter(state, action) {
+      state.mileageFromFilter = action.payload
+    },
+    setMileageToFilter(state, action) {
+      state.mileageToFilter = action.payload
+    },
+  },
   extraReducers: (builder) =>
     builder
       .addCase(getAllCars.fulfilled, (state, action) => {
@@ -94,5 +110,5 @@ const carsSlice = createSlice({
         }
       ),
 });
-
+export const { setBrandFilter, setPriceFilter, setMileageFromFilter, setMileageToFilter } = carsSlice.actions;
 export const carsReducer = carsSlice.reducer;

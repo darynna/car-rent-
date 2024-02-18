@@ -8,7 +8,6 @@ import { selectFavoriteCars } from "../redux/favourite/favouriteSelectors";
 const  Favourite = () => {
   const dispatch = useDispatch();
   const favoriteCarsArray = useSelector(selectFavoriteCars);
-  console.log(favoriteCarsArray)
   useEffect(() => {
     dispatch(getRentalCars());
   }, [dispatch]);

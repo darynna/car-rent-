@@ -23,7 +23,7 @@ const favoriteConfig = {
 export const store = configureStore({
   reducer: {
     cars: carsReducer,
-    favorite: persistReducer(favoriteConfig, favoriteReducer),
+    favorite: persistReducer(favoriteConfig, favoriteReducer)
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

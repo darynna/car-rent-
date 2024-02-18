@@ -8,5 +8,5 @@ export const StyledCatalogList = styled.ul`
   column-gap: 29px;
   justify-content: center;
 
-  margin-bottom: 50px;
+  margin: 50px 0;
 `;

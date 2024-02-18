@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect } from 'react';
 import {
   StyledModalBackdrop,
@@ -24,7 +25,6 @@ import {
 } from '../../helpers/helpers';
 
 const Modal = ({ car, closeModal }) => {
-  console.log(car);
   const {
     id,
     year,
@@ -113,18 +113,18 @@ const Modal = ({ car, closeModal }) => {
                 <BoxChild>
                 {accessories.length !== 0 &&
                   accessories.map((accessory, index) => (
-                    <>
+                    <React.Fragment key={`accessory-${index}`}>
                       {accessory}
                       <Line />
-                    </>
+                    </React.Fragment>
                   ))}
                   </BoxChild>
                 {functionalities.length !== 0 &&
                   functionalities.map((functionality, index) => (
-                    <>
+                    <React.Fragment key={`functionality-${index}`}>
                       {functionality}
                       <Line />
-                    </>
+                    </React.Fragment>
                   ))}
               </Box>
             </div>
