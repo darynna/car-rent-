@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice, isAnyOf } from "@reduxjs/toolkit";
 import {
   requestAllCars,
   requestCars,
-  requestMoreCars,
+  requestMoreCars
 } from "../../services/cars/api";
 
 export const getAllCars = createAsyncThunk(
@@ -45,6 +45,7 @@ export const getMoreRentalCars = createAsyncThunk(
 const INITIAL_STATE = {
   carsArray: [],
   carsTotalAmount: null,
+  // selectedCar: null,
   isLoading: false,
   error: null,
 };

@@ -1,19 +1,24 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Line from "../LineDecoration/LineDecoration"
-import {CarsItem, ContentWrapper, CarsImg, TitleWrapper, CarsTitle, CarPrice, Description, CarBtn, FavBtn} from "./CatalogItem.styled"
+import {CarsItem, ContentWrapper, CarsImg, TitleWrapper, CarsTitle, CarPrice, Description, CarBtn, FavBtn, Span} from "./CatalogItem.styled"
 import {
   splitAddressCity,
   splitAddressCountry,
   firstLetterUpCase,
   shortestSentence
 } from '../../helpers/helpers';
+import Modal from "components/Modal/Modal";
 import { ReactComponent as IconFavourite } from "../../assets/svg/heart.svg";
 import { selectFavoriteCars } from "../../redux/favourite/favouriteSelectors";
 import { addFavouriteCar, removeFavouriteCar} from "../../redux/favourite/favouriteSlice";
 
-const CatalogItem = ({id, year, make, model, type, img, functionalities, rentalPrice, rentalCompany, address  }) => {
+const CatalogItem = ({date}) => {
+  const {id, year, make, model, type, img, functionalities, rentalPrice, rentalCompany, address} = date;
   const dispatch = useDispatch();
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCar, setSelectedCar] = useState(null);
 
   const city = splitAddressCity(address);
   const country = splitAddressCountry(address);
@@ -22,6 +27,7 @@ const CatalogItem = ({id, year, make, model, type, img, functionalities, rentalP
 
   const [isFavorite, setIsFavorite] = useState(false);
   const favoriteCarsArray = useSelector(selectFavoriteCars);
+
   useEffect(() => {
     if (favoriteCarsArray.find((car) => car.id === id)) {
       setIsFavorite(true);
@@ -34,8 +40,17 @@ const CatalogItem = ({id, year, make, model, type, img, functionalities, rentalP
     if (favoriteCarsArray.find((car) => car.id === id)) {
       dispatch(removeFavouriteCar(id));
     } else {
-      dispatch(addFavouriteCar({id, year, make, model, type, img, functionalities, rentalPrice, rentalCompany, address  }));
+      dispatch(addFavouriteCar(date));
     }
+  };
+
+  const handleLearnMoreClick = () => {
+    setSelectedCar(date);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false); 
   };
 
    return (
@@ -43,7 +58,7 @@ const CatalogItem = ({id, year, make, model, type, img, functionalities, rentalP
      <ContentWrapper>
         <CarsImg src={img} alt={model}/>
         <TitleWrapper>
-          <CarsTitle>{`${make} ${model}, ${year}`}</CarsTitle>
+          <CarsTitle>{make} <Span>{model}</Span>, {year}</CarsTitle>
           <CarPrice>{rentalPrice}</CarPrice>
         </TitleWrapper>
          <Description >
@@ -68,9 +83,15 @@ const CatalogItem = ({id, year, make, model, type, img, functionalities, rentalP
            <IconFavourite/>
           </FavBtn>
      </ContentWrapper>
-     <CarBtn type="button">
+     <CarBtn onClick={handleLearnMoreClick} type="button">
         Learn more
       </CarBtn>
+      {isModalOpen && (
+        <Modal
+          car={selectedCar}
+          closeModal={closeModal}
+        />
+      )}
     </CarsItem>
    )
 }
