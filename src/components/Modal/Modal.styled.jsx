@@ -26,9 +26,6 @@ position: relative;
   border-radius: 24px
 
 `
-
-
-
 export const StyledModalBtn = styled.button`
 position: absolute;
 top: 16px;

@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 
 export const StyledHeader = styled.header`
   padding: 20px 20px;
-  margin-bottom: 20px;
+  margin: 14px 0;
+  background-color: white;
 `
 
 export const HeaderList = styled.ul`
@@ -16,7 +17,7 @@ gap: 24px;
 
 export const HeaderLink = styled(NavLink)`
 color: black;
-border: 1px solid black;
+border: 1px solid #3470ff;
 padding: 14px 44px;
 font-size: 18px;
 text-decoration: none;
