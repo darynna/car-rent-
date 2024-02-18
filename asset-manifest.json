@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/car-rent-app/static/css/main.0de3e857.css",
-    "main.js": "/car-rent-app/static/js/main.5db780c8.js",
+    "main.js": "/car-rent-app/static/js/main.9608eb7e.js",
     "static/js/222.ae952212.chunk.js": "/car-rent-app/static/js/222.ae952212.chunk.js",
-    "static/js/875.2fe30e5f.chunk.js": "/car-rent-app/static/js/875.2fe30e5f.chunk.js",
-    "static/js/141.4959454b.chunk.js": "/car-rent-app/static/js/141.4959454b.chunk.js",
-    "static/js/121.d0f2de3d.chunk.js": "/car-rent-app/static/js/121.d0f2de3d.chunk.js",
+    "static/js/355.f2e72c2c.chunk.js": "/car-rent-app/static/js/355.f2e72c2c.chunk.js",
+    "static/js/141.b1a44924.chunk.js": "/car-rent-app/static/js/141.b1a44924.chunk.js",
+    "static/js/864.c3b99312.chunk.js": "/car-rent-app/static/js/864.c3b99312.chunk.js",
+    "static/js/121.035010d1.chunk.js": "/car-rent-app/static/js/121.035010d1.chunk.js",
     "static/media/Montserrat-Bold.ttf": "/car-rent-app/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.ttf",
     "static/media/Montserrat-SemiBold.ttf": "/car-rent-app/static/media/Montserrat-SemiBold.93b37a465fc4ec0d0415.ttf",
     "static/media/Montserrat-Medium.ttf": "/car-rent-app/static/media/Montserrat-Medium.b8c6753baa964ccac1ba.ttf",
@@ -19,14 +20,15 @@
     "static/media/heart.svg": "/car-rent-app/static/media/heart.282d936f414f4c6884ab9306a91dad67.svg",
     "static/media/closeBtn.svg": "/car-rent-app/static/media/closeBtn.f3cbdd58dc25ca7cbb3d242106b56fb9.svg",
     "main.0de3e857.css.map": "/car-rent-app/static/css/main.0de3e857.css.map",
-    "main.5db780c8.js.map": "/car-rent-app/static/js/main.5db780c8.js.map",
+    "main.9608eb7e.js.map": "/car-rent-app/static/js/main.9608eb7e.js.map",
     "222.ae952212.chunk.js.map": "/car-rent-app/static/js/222.ae952212.chunk.js.map",
-    "875.2fe30e5f.chunk.js.map": "/car-rent-app/static/js/875.2fe30e5f.chunk.js.map",
-    "141.4959454b.chunk.js.map": "/car-rent-app/static/js/141.4959454b.chunk.js.map",
-    "121.d0f2de3d.chunk.js.map": "/car-rent-app/static/js/121.d0f2de3d.chunk.js.map"
+    "355.f2e72c2c.chunk.js.map": "/car-rent-app/static/js/355.f2e72c2c.chunk.js.map",
+    "141.b1a44924.chunk.js.map": "/car-rent-app/static/js/141.b1a44924.chunk.js.map",
+    "864.c3b99312.chunk.js.map": "/car-rent-app/static/js/864.c3b99312.chunk.js.map",
+    "121.035010d1.chunk.js.map": "/car-rent-app/static/js/121.035010d1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0de3e857.css",
-    "static/js/main.5db780c8.js"
+    "static/js/main.9608eb7e.js"
   ]
 }
