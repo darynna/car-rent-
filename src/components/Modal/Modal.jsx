@@ -38,7 +38,6 @@ const Modal = ({ car, closeModal }) => {
     accessories,
     functionalities,
     rentalPrice,
-    rentalCompany,
     address,
     rentalConditions,
     mileage,
