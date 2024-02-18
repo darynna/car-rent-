@@ -14,8 +14,15 @@ const  Favourite = () => {
 
   return (
     <>
+    {favoriteCarsArray.length === 0 && (
+      <p>Please, add some cars you may like!</p>
+    )}
+        {favoriteCarsArray.length > 0 && (
+          <>
       <CatalogList carsArray={favoriteCarsArray}/>
       <LoadMoreButton />
+      </>
+    )}
     </>
   );
 };
