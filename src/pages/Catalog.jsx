@@ -30,7 +30,7 @@ const Catalog = () => {
   if (priceValue !== 'Any prices') {
     const price = parseInt(priceValue.replace('$', ''));
     filteredCars = filteredCars.filter(car => 
-      parseInt(car.rentalPrice.replace('$', '')) === price
+      parseInt(car.rentalPrice.replace('$', '')) <= price
     );
   }
 

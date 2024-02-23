@@ -9,6 +9,7 @@ const LoadMoreButton = () => {
   const allCars = useSelector(selectTotalCarsAmount);
   const limit = Math.ceil(allCars / 12);
   let hidden = false;
+  
   if (currentPage >= limit){
     hidden = true;
   }

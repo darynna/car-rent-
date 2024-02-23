@@ -46,6 +46,7 @@ export const SearchButton = styled.button`
   border: none;
   border-radius: 12px;
   background-color: rgb(52, 112, 255);
+  transition: all 250ms cubic-bezier(0., 0, 0.2, 1);
   cursor: pointer;
 
   &:hover {

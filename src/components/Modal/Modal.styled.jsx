@@ -101,7 +101,7 @@ flex-wrap: wrap;
 gap: 8px;
 `
 
-export const Button = styled.button`
+export const Button = styled.a`
 padding: 12px 50px;
 background-color: rgb(52, 112, 255);
 color: white;
