@@ -13,11 +13,13 @@ font-size: 44px;
 font-weight: 600;
 color: white;
 text-shadow: 2px 2px 4px blue;
+text-align: center
   `
 
-  export const Text = styled.h1`
+  export const Text = styled.p`
   font-size: 24px;
   font-weight: 500;
   color: #c4d7f5;
   text-shadow: 2px 2px 4px blue;
+  text-align: center
     `

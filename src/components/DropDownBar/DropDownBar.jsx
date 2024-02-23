@@ -65,12 +65,36 @@ const handleSearch = (e) => {
         value={brandFilter}
         onChange={handleFilterInputChange}
         text="Car brand"
+        theme={(theme) => ({
+          ...theme,
+          colors: {
+            ...theme.colors,
+            primary50: '#121417', 
+            primary: 'transparent',
+            neutral20: 'transparent', 
+            neutral30: 'transparent',
+            neutral50: '#121417', 
+            neutral80: '#121417',
+          },
+        })}
       />
       <Dropdown
         options={[{ value: "Any prices", label: "Any prices" }, ...priceList]}
         value={priceFilter}
         onChange={handlePriceChange}
         text="Price/ 1hour"
+        theme={(theme) => ({
+          ...theme,
+          colors: {
+            ...theme.colors,
+            primary50: '#121417',
+            primary: 'transparent',
+            neutral20: 'transparent', 
+            neutral30: 'transparent',
+            neutral50: '#121417',
+            neutral80: '#121417',
+          },
+        })}
       />
       <form onSubmit={handleSearch}>
           <label>

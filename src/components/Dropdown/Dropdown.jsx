@@ -3,7 +3,7 @@ import Select from 'react-select';
 import {StyledText, StyledBox} from './Dropdown.styled'
 import { firstSelectStyles } from './Select.styled';
 
-const Dropdown = ({ options, onChange, value, text }) => {
+const Dropdown = ({ options, onChange, value, text, theme }) => {
   return (
     <StyledBox>
     <StyledText>{text}</StyledText>
@@ -12,7 +12,8 @@ const Dropdown = ({ options, onChange, value, text }) => {
           value={value}
           options={options}
           onChange={onChange}
-          placeholder={value}/>
+          placeholder={value}
+          theme={theme}/>
     </StyledBox>
 
   );
